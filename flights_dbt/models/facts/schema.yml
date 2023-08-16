@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fact_flights
+    description: "fact_flights"
+    columns:
+      - name: fligth_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_boarding_passes
+    description: "fact_boarding_passes"
+    columns:
+      - name: flight_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+    
+
+  - name: fact_tickets
+    description: "fact_tickets"
+    columns:
+      - name: book_ref
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
